@@ -4,30 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Pir Muhammad Ismail</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to CSS -->
-    <script src="scripts.js" defer></script> <!-- Link to JS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background: linear-gradient(to bottom right, #007BFF, #f4f4f4);
             color: #333;
         }
         header {
-            background-color: #007BFF;
+            background-color: #0056b3;
             color: white;
             padding: 20px 0;
             text-align: center;
+            position: relative;
         }
         header h1 {
             font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.2em;
+            margin-top: 0;
+        }
+        .logo-container {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            display: flex;
+            gap: 10px;
+        }
+        .logo-container img {
+            height: 50px;
         }
         .profile-image {
             width: 150px;
             height: 150px;
             border-radius: 50%;
             margin-top: 20px;
+            border: 4px solid white;
         }
         nav ul {
             display: flex;
@@ -59,7 +75,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         h2 {
-            color: #007BFF;
+            color: #0056b3;
             margin-bottom: 15px;
         }
         .tabs {
@@ -88,30 +104,36 @@
         .social-links {
             list-style-type: none;
             padding: 0;
+            text-align: center;
         }
         .social-links li {
             display: inline;
             margin: 0 15px;
         }
         .social-links a {
-            font-size: 1.2em;
+            font-size: 1.5em;
             text-decoration: none;
             color: #007BFF;
         }
         .social-links a:hover {
             color: #0056b3;
         }
+        .address {
+            margin-top: 20px;
+            font-size: 1.1em;
+        }
     </style>
 </head>
 <body>
-
     <!-- Header Section -->
     <header>
-        <div class="container">
-            <img src="your-photo.jpg" alt="Dr. Pir Muhammad Ismail" class="profile-image">
-            <h1>Dr. Pir Muhammad Ismail</h1>
-            <p class="intro">Postdoctoral Researcher | PhD in Electronics | Passionate about Innovation & Research</p>
+        <div class="logo-container">
+            <img src="university-logo1.png" alt="University Logo 1">
+            <img src="university-logo2.png" alt="University Logo 2">
         </div>
+        <img src="your-photo.jpg" alt="Dr. Pir Muhammad Ismail" class="profile-image">
+        <h1>Dr. Pir Muhammad Ismail</h1>
+        <p class="intro">Postdoctoral Researcher | PhD in Electronics | Passionate about Innovation & Research</p>
     </header>
 
     <!-- Navigation Menu -->
@@ -164,34 +186,35 @@
         <section id="institute" class="tab-content">
             <h2>Institute</h2>
             <p>I am currently working at the prestigious XYZ Institute of Technology, focusing on research in microelectronics, embedded systems, and sustainable technology solutions.</p>
+            <div class="address">
+                <strong>Address:</strong><br>
+                XYZ Institute of Technology<br>
+                1234 Innovation Road, Tech City<br>
+                Email: ismail@xyz.edu<br>
+                Phone: +123-456-7890
+            </div>
         </section>
 
         <section id="social">
             <h2>Social Media Links</h2>
             <ul class="social-links">
-                <li><a href="https://www.linkedin.com/in/xyz" target="_blank">LinkedIn</a></li>
-                <li><a href="https://twitter.com/xyz" target="_blank">Twitter</a></li>
-                <li><a href="https://scholar.google.com/citations?user=xyz" target="_blank">Google Scholar</a></li>
+                <li><a href="https://www.linkedin.com/in/xyz" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="https://x.com/xyz" target="_blank"><i class="fab fa-x-twitter"></i></a></li>
+                <li><a href="https://scholar.google.com/citations?user=xyz" target="_blank"><i class="fas fa-graduation-cap"></i></a></li>
             </ul>
         </section>
     </main>
 
     <script>
         function showTab(tabId) {
-            // Hide all tabs
             const tabs = document.querySelectorAll('.tab-content');
             tabs.forEach(tab => tab.classList.remove('active-tab'));
-
-            // Show the selected tab
             const selectedTab = document.getElementById(tabId);
             selectedTab.classList.add('active-tab');
         }
-
-        // Show the first tab by default
         document.addEventListener('DOMContentLoaded', function() {
             showTab('publications');
         });
     </script>
-
 </body>
 </html>
