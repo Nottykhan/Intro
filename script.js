@@ -1,4 +1,4 @@
-// Smooth Scroll and Active Navigation
+// JavaScript for smooth scrolling and active link highlighting
 document.addEventListener("DOMContentLoaded", function () {
     // Smooth scrolling when clicking on nav links
     const navLinks = document.querySelectorAll('nav ul li a');
@@ -40,4 +40,3 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
-
