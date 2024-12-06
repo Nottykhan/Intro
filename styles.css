@@ -1,1 +1,10 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* Optional: Add style for active links */
+nav ul li a.active {
+    color: #ff6f61; /* Active link color */
+    font-weight: bold;
+}
 
