@@ -1,228 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COMSOL Software Poster</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Arial', sans-serif;
-            color: #fff;
-            background: url('https://www.comsol.com/shared/images/gallery/simulation.jpg') no-repeat center center fixed;
-            background-size: cover;
-            overflow-x: hidden;
-        }
-
-        /* Header */
-        header {
-            text-align: center;
-            padding: 2em 1em;
-            background: rgba(0, 0, 0, 0.7);
-            animation: fadeIn 2s ease-in-out;
-        }
-
-        header img {
-            width: 150px;
-            margin-bottom: 1em;
-        }
-
-        header h1 {
-            font-size: 3.5em;
-            margin: 0.3em 0;
-            color: #FFD700;
-        }
-
-        header p {
-            font-size: 1.3em;
-        }
-
-        /* Main Section */
-        main {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 2em 1em;
-            background: rgba(0, 0, 0, 0.6);
-        }
-
-        .card {
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 10px;
-            margin: 1em;
-            width: 300px;
-            padding: 1.5em;
-            color: #333;
-            text-align: center;
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .card:hover {
-            transform: scale(1.05);
-        }
-
-        .card img {
-            width: 100px;
-            margin-bottom: 1em;
-        }
-
-        .card h2 {
-            font-size: 1.8em;
-            color: #111;
-        }
-
-        .card p {
-            font-size: 1em;
-            color: #444;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 1.5em;
-            background: rgba(0, 0, 0, 0.9);
-        }
-
-        footer span {
-            color: #FFD700;
-            font-weight: bold;
-        }
-
-        /* Pop-up */
-        .popup {
-            display: none;
-            position: fixed;
-            background: rgba(0, 0, 0, 0.9);
-            color: #fff;
-            width: 90%;
-            max-width: 400px;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            padding: 2em;
-            text-align: center;
-            border-radius: 10px;
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
-            z-index: 1000;
-        }
-
-        .popup h3 {
-            color: #FFD700;
-            font-size: 2em;
-        }
-
-        .popup button {
-            background: #FFD700;
-            border: none;
-            color: #333;
-            padding: 0.8em 1.2em;
-            font-size: 1em;
-            margin-top: 1em;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .popup button:hover {
-            background: #FFBF00;
-        }
-
-        #popup .close-btn {
-            position: absolute;
-            top: 10px;
-            right: 15px;
-            font-size: 1.5em;
-            color: #FFD700;
-            background: none;
-            border: none;
-            cursor: pointer;
-        }
-
-        #popup .close-btn:hover {
-            color: #FFBF00;
-        }
-
-        #overlay {
-            display: none;
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            top: 0;
-            left: 0;
-            z-index: 999;
-        }
-
-        /* Animation */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-    </style>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Your Personal Blog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
     <header>
-        <img src="https://www.comsol.com/shared/images/comsol-logo-300x125.png" alt="COMSOL Logo">
-        <h1>COMSOL Software</h1>
-        <p>The ultimate solution for Multiphysics Simulation.</p>
+        <div class="navbar">
+            <a href="#" class="logo">My Blog</a>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Blog Posts</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <div class="card">
-            <img src="https://www.comsol.com/shared/images/icon-multiphysics.png" alt="Multiphysics">
-            <h2>Multiphysics Modeling</h2>
-            <p>Simulate multiple interacting physics in one seamless interface.</p>
-        </div>
-        <div class="card">
-            <img src="https://www.comsol.com/shared/images/icon-simulation.png" alt="Simulation">
-            <h2>Application Building</h2>
-            <p>Turn your models into easy-to-use simulation apps.</p>
-        </div>
-        <div class="card">
-            <img src="https://www.comsol.com/shared/images/icon-productivity.png" alt="Productivity">
-            <h2>High Accuracy</h2>
-            <p>Leverage industry-leading solvers for precision engineering.</p>
-        </div>
+        <section class="hero">
+            <h1>Welcome to My Blog</h1>
+            <p>Explore my latest thoughts and ideas!</p>
+            <button class="cta-button">Get Started</button>
+        </section>
+
+        <section class="posts">
+            <article class="post">
+                <h2>Latest Post Title</h2>
+                <img src="post-image.jpg" alt="Post Image">
+                <p>Snippet of the post content...</p>
+                <a href="#" class="read-more">Read More</a>
+            </article>
+            <!-- Add more posts here -->
+        </section>
+
+        <section class="contact-form">
+            <h2>Contact Me</h2>
+            <form action="#" method="POST">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
     </main>
 
-    <div id="overlay"></div>
-    <div class="popup" id="popup">
-        <button class="close-btn" onclick="closePopup()">×</button>
-        <h3>Welcome to COMSOL!</h3>
-        <p>Explore the powerful features of COMSOL software today!</p>
-        <a href="https://www.comsol.com" target="_blank">
-            <button>Learn More</button>
-        </a>
-    </div>
-
     <footer>
-        <p>All rights reserved with <span>PIR and Co</span></p>
+        <p>&copy; 2024 My Personal Blog. All Rights Reserved.</p>
     </footer>
 
-    <script>
-        // Pop-up logic
-        window.onload = function () {
-            const popup = document.getElementById('popup');
-            const overlay = document.getElementById('overlay');
+    <!-- Pop-up Modal -->
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close-btn" id="closePopup">&times;</span>
+            <h3>Welcome to my blog!</h3>
+            <p>Enjoy exploring my latest posts!</p>
+        </div>
+    </div>
 
-            popup.style.display = 'block';
-            overlay.style.display = 'block';
-        };
-
-        function closePopup() {
-            const popup = document.getElementById('popup');
-            const overlay = document.getElementById('overlay');
-            popup.style.display = 'none';
-            overlay.style.display = 'none';
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
-
 </html>
