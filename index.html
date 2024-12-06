@@ -3,67 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Your Personal Blog</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Dr. Pir Muhammad Ismail</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script> <!-- Add the JavaScript file here -->
 </head>
 <body>
+
+    <!-- Header Section -->
     <header>
-        <div class="navbar">
-            <a href="#" class="logo">My Blog</a>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Blog Posts</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
+        <div class="container">
+            <img src="your-photo.jpg" alt="Dr. Pir Muhammad Ismail" class="profile-image">
+            <h1>Dr. Pir Muhammad Ismail</h1>
+            <p class="intro">Postdoctoral Researcher | PhD in Electronics | Passionate about Innovation & Research</p>
         </div>
     </header>
 
+    <!-- Navigation Menu -->
+    <nav>
+        <ul>
+            <li><a href="#social">Social Media</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#institute">Institute</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Section -->
     <main>
-        <section class="hero">
-            <h1>Welcome to My Blog</h1>
-            <p>Explore my latest thoughts and ideas!</p>
-            <button class="cta-button">Get Started</button>
+        <section id="social">
+            <h2>Social Media Links</h2>
+            <ul class="social-links">
+                <li><a href="https://www.linkedin.com/in/xyz" target="_blank">LinkedIn</a></li>
+                <li><a href="https://twitter.com/xyz" target="_blank">Twitter</a></li>
+                <li><a href="https://scholar.google.com/citations?user=xyz" target="_blank">Google Scholar</a></li>
+            </ul>
         </section>
 
-        <section class="posts">
-            <article class="post">
-                <h2>Latest Post Title</h2>
-                <img src="post-image.jpg" alt="Post Image">
-                <p>Snippet of the post content...</p>
-                <a href="#" class="read-more">Read More</a>
-            </article>
-            <!-- Add more posts here -->
+        <section id="publications">
+            <h2>Publications</h2>
+            <p>Here are some of my most recent publications:</p>
+            <ul>
+                <li><a href="https://ieeexplore.ieee.org/document/xyz" target="_blank">Title of Paper 1</a></li>
+                <li><a href="https://www.journals.elsevier.com/xyz" target="_blank">Title of Paper 2</a></li>
+                <li><a href="https://www.springer.com/xyz" target="_blank">Title of Paper 3</a></li>
+            </ul>
         </section>
 
-        <section class="contact-form">
-            <h2>Contact Me</h2>
-            <form action="#" method="POST">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" required></textarea>
-                <button type="submit">Submit</button>
-            </form>
+        <section id="achievements">
+            <h2>Achievements</h2>
+            <ul>
+                <li>Awarded the Best Paper Award at XYZ Conference, 2023</li>
+                <li>Member of the IEEE since 2019</li>
+                <li>Research funded by XYZ Organization, 2022</li>
+            </ul>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <p>PhD in Electronics, University of Electronic Science and Technology of China (UESTC), Chengdu, China</p>
+            <p>Master's in Electrical Engineering, XYZ University, Pakistan</p>
+        </section>
+
+        <section id="institute">
+            <h2>Institute and University</h2>
+            <p><strong>Current Institute:</strong> XYZ Research Institute</p>
+            <p><strong>University:</strong> XYZ University, Pakistan</p>
+            <p><strong>Address:</strong> XYZ Road, City, Pakistan</p>
+            <p><strong>University Official Website:</strong> <a href="https://www.uestc.edu.cn" target="_blank">UESTC Official Website</a></p>
         </section>
     </main>
 
+    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 My Personal Blog. All Rights Reserved.</p>
+        <p>&copy; 2024 Dr. Pir Muhammad Ismail</p>
     </footer>
 
-    <!-- Pop-up Modal -->
-    <div class="popup" id="popup">
-        <div class="popup-content">
-            <span class="close-btn" id="closePopup">&times;</span>
-            <h3>Welcome to my blog!</h3>
-            <p>Enjoy exploring my latest posts!</p>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
 </body>
 </html>
