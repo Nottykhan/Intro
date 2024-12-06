@@ -10,11 +10,12 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to bottom right, #007BFF, #f4f4f4);
             color: #333;
+            background: url('beautiful-background.jpg') no-repeat center center fixed;
+            background-size: cover;
         }
         header {
-            background-color: #0056b3;
+            background-color: rgba(0, 91, 150, 0.8);
             color: white;
             padding: 20px 0;
             text-align: center;
@@ -32,8 +33,6 @@
             position: absolute;
             top: 10px;
             left: 10px;
-            display: flex;
-            gap: 10px;
         }
         .logo-container img {
             height: 50px;
@@ -45,66 +44,31 @@
             margin-top: 20px;
             border: 4px solid white;
         }
-        nav ul {
-            display: flex;
-            justify-content: center;
-            background-color: #333;
-            list-style-type: none;
-            margin: 0;
-            padding: 10px 0;
-        }
-        nav ul li {
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.1em;
-            padding: 10px 20px;
-        }
-        nav ul li a:hover {
-            background-color: #555;
-            border-radius: 5px;
-        }
         main {
             max-width: 1200px;
             margin: 40px auto;
             padding: 20px;
-            background-color: white;
+            background-color: rgba(255, 255, 255, 0.9);
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         h2 {
             color: #0056b3;
             margin-bottom: 15px;
         }
-        .tabs {
-            display: flex;
-            justify-content: space-around;
-            margin-bottom: 20px;
-        }
-        .tab-button {
-            padding: 10px 20px;
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            cursor: pointer;
+        ul {
+            list-style-type: none;
+            padding: 0;
             font-size: 1.1em;
-            border-radius: 5px;
         }
-        .tab-button:hover {
-            background-color: #0056b3;
-        }
-        .tab-content {
-            display: none;
-        }
-        .active-tab {
-            display: block;
+        ul li {
+            margin-bottom: 10px;
         }
         .social-links {
             list-style-type: none;
             padding: 0;
             text-align: center;
+            margin-top: 20px;
         }
         .social-links li {
             display: inline;
@@ -113,12 +77,16 @@
         .social-links a {
             font-size: 1.5em;
             text-decoration: none;
-            color: #007BFF;
-        }
-        .social-links a:hover {
             color: #0056b3;
         }
+        .social-links a:hover {
+            color: #003f87;
+        }
         .address {
+            margin-top: 20px;
+            font-size: 1.1em;
+        }
+        .skills {
             margin-top: 20px;
             font-size: 1.1em;
         }
@@ -128,93 +96,39 @@
     <!-- Header Section -->
     <header>
         <div class="logo-container">
-            <img src="university-logo1.png" alt="University Logo 1">
-            <img src="university-logo2.png" alt="University Logo 2">
+            <img src="university-logo.png" alt="University Logo">
         </div>
         <img src="your-photo.jpg" alt="Dr. Pir Muhammad Ismail" class="profile-image">
         <h1>Dr. Pir Muhammad Ismail</h1>
-        <p class="intro">Postdoctoral Researcher | PhD in Electronics | Passionate about Innovation & Research</p>
+        <p class="intro">Postdoctoral Researcher | PhD in Materials Physics</p>
     </header>
 
-    <!-- Navigation Menu -->
-    <nav>
-        <ul>
-            <li><a href="#social">Social Media</a></li>
-            <li><a href="#publications">Publications</a></li>
-            <li><a href="#achievements">Achievements</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#institute">Institute</a></li>
-        </ul>
-    </nav>
-
-    <!-- Main Content Sections -->
+    <!-- Main Content Section -->
     <main>
-        <div class="tabs">
-            <button class="tab-button" onclick="showTab('publications')">Publications</button>
-            <button class="tab-button" onclick="showTab('achievements')">Achievements</button>
-            <button class="tab-button" onclick="showTab('education')">Education</button>
-            <button class="tab-button" onclick="showTab('institute')">Institute</button>
+        <h2>Contact Information</h2>
+        <div class="address">
+            <strong>Address:</strong><br>
+            University of Electronic Science and Technology<br>
+            313001, China<br>
+            Email: ismail@uestc.edu.cn<br>
+            Phone: +123-456-7890
         </div>
 
-        <section id="publications" class="tab-content">
-            <h2>Publications</h2>
-            <ul>
-                <li><a href="https://ieeexplore.ieee.org/document/xyz" target="_blank">Title of Paper 1</a></li>
-                <li><a href="https://www.journals.elsevier.com/xyz" target="_blank">Title of Paper 2</a></li>
-                <li><a href="https://www.springer.com" target="_blank">Title of Paper 3</a></li>
-            </ul>
-        </section>
+        <h2>Publication</h2>
+        <ul>
+            <li><a href="https://example.com/publication" target="_blank">Photoelectron “Bridge” in Van Der Waals Heterojunction for Enhanced Photocatalytic CO2 Conversion Under Visible Light</a></li>
+        </ul>
 
-        <section id="achievements" class="tab-content">
-            <h2>Achievements</h2>
-            <ul>
-                <li>Received 'Best Paper' award at XYZ Conference (2023).</li>
-                <li>Published 20+ papers in renowned journals and conferences.</li>
-                <li>Keynote speaker at the International Electronics Symposium (2024).</li>
-            </ul>
-        </section>
+        <h2>Skills and Expertise</h2>
+        <div class="skills">
+            Lithium-Ion Batteries, Fiber, Photocatalysis, Composites, Material Characterization, Photocatalysts, Coordination Complexes, Nanorods
+        </div>
 
-        <section id="education" class="tab-content">
-            <h2>Education</h2>
-            <ul>
-                <li>Ph.D. in Electronics Engineering, University of XYZ, 2021</li>
-                <li>M.Sc. in Electronics, ABC University, 2017</li>
-                <li>B.Sc. in Electrical Engineering, DEF University, 2015</li>
-            </ul>
-        </section>
-
-        <section id="institute" class="tab-content">
-            <h2>Institute</h2>
-            <p>I am currently working at the prestigious XYZ Institute of Technology, focusing on research in microelectronics, embedded systems, and sustainable technology solutions.</p>
-            <div class="address">
-                <strong>Address:</strong><br>
-                XYZ Institute of Technology<br>
-                1234 Innovation Road, Tech City<br>
-                Email: ismail@xyz.edu<br>
-                Phone: +123-456-7890
-            </div>
-        </section>
-
-        <section id="social">
-            <h2>Social Media Links</h2>
-            <ul class="social-links">
-                <li><a href="https://www.linkedin.com/in/xyz" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-                <li><a href="https://x.com/xyz" target="_blank"><i class="fab fa-x-twitter"></i></a></li>
-                <li><a href="https://scholar.google.com/citations?user=xyz" target="_blank"><i class="fas fa-graduation-cap"></i></a></li>
-            </ul>
-        </section>
+        <h2>Social Media Links</h2>
+        <ul class="social-links">
+            <li><a href="https://x.com/xyz" target="_blank"><i class="fab fa-x-twitter"></i></a></li>
+            <li><a href="https://www.researchgate.net/profile/xyz" target="_blank"><i class="fab fa-researchgate"></i></a></li>
+        </ul>
     </main>
-
-    <script>
-        function showTab(tabId) {
-            const tabs = document.querySelectorAll('.tab-content');
-            tabs.forEach(tab => tab.classList.remove('active-tab'));
-            const selectedTab = document.getElementById(tabId);
-            selectedTab.classList.add('active-tab');
-        }
-        document.addEventListener('DOMContentLoaded', function() {
-            showTab('publications');
-        });
-    </script>
 </body>
 </html>
