@@ -6,6 +6,102 @@
     <title>Dr. Pir Muhammad Ismail</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link to CSS -->
     <script src="scripts.js" defer></script> <!-- Link to JS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5em;
+        }
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-top: 20px;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            list-style-type: none;
+            margin: 0;
+            padding: 10px 0;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+            padding: 10px 20px;
+        }
+        nav ul li a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+        main {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #007BFF;
+            margin-bottom: 15px;
+        }
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+        .tab-button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1em;
+            border-radius: 5px;
+        }
+        .tab-button:hover {
+            background-color: #0056b3;
+        }
+        .tab-content {
+            display: none;
+        }
+        .active-tab {
+            display: block;
+        }
+        .social-links {
+            list-style-type: none;
+            padding: 0;
+        }
+        .social-links li {
+            display: inline;
+            margin: 0 15px;
+        }
+        .social-links a {
+            font-size: 1.2em;
+            text-decoration: none;
+            color: #007BFF;
+        }
+        .social-links a:hover {
+            color: #0056b3;
+        }
+    </style>
 </head>
 <body>
 
@@ -31,6 +127,45 @@
 
     <!-- Main Content Sections -->
     <main>
+        <div class="tabs">
+            <button class="tab-button" onclick="showTab('publications')">Publications</button>
+            <button class="tab-button" onclick="showTab('achievements')">Achievements</button>
+            <button class="tab-button" onclick="showTab('education')">Education</button>
+            <button class="tab-button" onclick="showTab('institute')">Institute</button>
+        </div>
+
+        <section id="publications" class="tab-content">
+            <h2>Publications</h2>
+            <ul>
+                <li><a href="https://ieeexplore.ieee.org/document/xyz" target="_blank">Title of Paper 1</a></li>
+                <li><a href="https://www.journals.elsevier.com/xyz" target="_blank">Title of Paper 2</a></li>
+                <li><a href="https://www.springer.com" target="_blank">Title of Paper 3</a></li>
+            </ul>
+        </section>
+
+        <section id="achievements" class="tab-content">
+            <h2>Achievements</h2>
+            <ul>
+                <li>Received 'Best Paper' award at XYZ Conference (2023).</li>
+                <li>Published 20+ papers in renowned journals and conferences.</li>
+                <li>Keynote speaker at the International Electronics Symposium (2024).</li>
+            </ul>
+        </section>
+
+        <section id="education" class="tab-content">
+            <h2>Education</h2>
+            <ul>
+                <li>Ph.D. in Electronics Engineering, University of XYZ, 2021</li>
+                <li>M.Sc. in Electronics, ABC University, 2017</li>
+                <li>B.Sc. in Electrical Engineering, DEF University, 2015</li>
+            </ul>
+        </section>
+
+        <section id="institute" class="tab-content">
+            <h2>Institute</h2>
+            <p>I am currently working at the prestigious XYZ Institute of Technology, focusing on research in microelectronics, embedded systems, and sustainable technology solutions.</p>
+        </section>
+
         <section id="social">
             <h2>Social Media Links</h2>
             <ul class="social-links">
@@ -39,10 +174,24 @@
                 <li><a href="https://scholar.google.com/citations?user=xyz" target="_blank">Google Scholar</a></li>
             </ul>
         </section>
+    </main>
 
-        <section id="publications">
-            <h2>Publications</h2>
-            <ul>
-                <li><a href="https://ieeexplore.ieee.org/document/xyz" target="_blank">Title of Paper 1</a></li>
-                <li><a href="https://www.journals.elsevier.com/xyz" target="_blank">Title of Paper 2</a></li>
-                <li><a href="https://www.springer.com
+    <script>
+        function showTab(tabId) {
+            // Hide all tabs
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => tab.classList.remove('active-tab'));
+
+            // Show the selected tab
+            const selectedTab = document.getElementById(tabId);
+            selectedTab.classList.add('active-tab');
+        }
+
+        // Show the first tab by default
+        document.addEventListener('DOMContentLoaded', function() {
+            showTab('publications');
+        });
+    </script>
+
+</body>
+</html>
